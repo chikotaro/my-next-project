@@ -12,8 +12,19 @@
 	display: flex;
 }
 
-@media (max-width: 640px){
-  .header {
-    padding: 24px 16px 8px;
-  }
-} 
+.logo {
+	height: 24px;
+	width: auto;
+}
+
+.items {
+	display: flex;
+	gap: 40px;
+	color: #fff
+}
+
+@media (max-width: 640px) {
+	.header {
+		padding: 24px 16px 8px;
+	}
+}
