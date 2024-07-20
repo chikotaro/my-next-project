@@ -12,7 +12,6 @@ export type Member = {
 	image: MicroCMSImage;
 } & MicroCMSListContent;
 
-
 export type Category = {
 	name: string;
 } & MicroCMSListContent;
@@ -21,7 +20,7 @@ export type News = {
 	title?: string;
 	description?: string;
 	content?: string;
-	thumbnail?:MicroCMSImage;
+	thumbnail?: MicroCMSImage;
 	category?: Category;
 } & MicroCMSListContent;
 
@@ -64,4 +63,16 @@ export const getNewsDetail = async (
 		queries,
 	});
 	return detailData;
-}
+};
+
+export const getCategoryDetail = async (
+	contentId: string,
+	queries?: MicroCMSQueries
+) => {
+	const detailData = await client.getListDetail<Category>({
+		endpoint: "categories",
+		contentId,
+		queries,
+	});
+	return detailData;
+};
