@@ -6,7 +6,7 @@ type Props = {
 	sub: string;
 };
 
-export default function Hero({ title, sub }) {
+export default function Hero({ title, sub }:Props) {
 	return (
 		<section className={styles.container}>
 			<div>

@@ -9,16 +9,6 @@ type Props = {
 	data: News;
 };
 
-interface ArticleProps {
-	data: {
-		category: {
-			id: string;
-			// 他のカテゴリーのフィールド
-		} | null;
-		// 他のデータのフィールド
-	};
-}
-
 export default function Article({ data }: Props) {
 	return (
 		<main>
@@ -33,7 +23,7 @@ export default function Article({ data }: Props) {
 						<Category category={data.category} />
 					</Link>
 				) : (
-					<div className={styles.categoryLink}>カテゴリーが利用できません</div>
+					<div className={styles.categoryLink}>カテゴリーなし</div>
 				)}
 				{/* <Link
           href={`/news/category/${data.category.id}`}
