@@ -43,7 +43,7 @@ export default function NewsList({ news }: Props) {
 								) : (
 									<div className={styles.meta}>category none</div>
 								)}
-								;
+
 								<Date date={article.publishedAt ?? article.createdAt} />
 							</dd>
 						</dl>
