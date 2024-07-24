@@ -26,12 +26,6 @@ export async function createContactData(_prevState: any, formData: FormData) {
 			message: "名を入力してください",
 		};
 	}
-	if (!rawFormData.lastname) {
-		return {
-			status: "error",
-			message: "性を入力してください",
-		};
-	}
 	if (!rawFormData.company) {
 		return {
 			status: "error",
